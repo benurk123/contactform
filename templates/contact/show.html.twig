@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ contact.naam }}{% endblock %}
+
+{% block body %}
+    <h1>{{ contact.naam }}</h1>
+    <p>{{ contact.email }}</p>
+    <p>{{ contact.telefoonnummer }}</p>
+    <hr>
+    <a href="/">Terug</a>
+{% endblock %}
+
+
