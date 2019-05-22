@@ -27,36 +27,70 @@ class Contact
      * @ORM\Column(type="text")
      */
     private $telefoonnummer;
-//    /**
-//     * @ORM\Column(type="text")
-//     */
+
+    /**
+     * @return mixed
+     */
     public function getId()
     {
         return $this->id;
     }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getNaam()
     {
         return $this->naam;
     }
-    public function setNaam($naam)
+
+    /**
+     * @param mixed $naam
+     */
+    public function setNaam($naam): void
     {
-        return $this->naam = $naam;
+        $this->naam = $naam;
     }
+
+    /**
+     * @return mixed
+     */
     public function getEmail()
     {
         return $this->email;
     }
-    public function setEmail($email)
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email): void
     {
-        return $this->email = $email;
+        $this->email = $email;
     }
+
+    /**
+     * @return mixed
+     */
     public function getTelefoonnummer()
     {
         return $this->telefoonnummer;
     }
-    public function setTelefoonnummer($telefoonnummer)
+
+    /**
+     * @param mixed $telefoonnummer
+     */
+    public function setTelefoonnummer($telefoonnummer): void
     {
-        return $this->telefoonnummer = $telefoonnummer;
+        $this->telefoonnummer = $telefoonnummer;
     }
+
 }
 

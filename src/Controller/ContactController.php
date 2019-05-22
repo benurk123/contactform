@@ -19,8 +19,8 @@ class ContactController extends  Controller{
      * @Route("/", name="contact_list")
      * @Method({"GET"})
      */
-    public function index(){
-
+    public function index()
+    {
         $contact= $this->getDoctrine()->getRepository(Contact::class)->findAll();
         return $this->render('contact/index.html.twig', array('contact' => $contact));
     }
@@ -64,9 +64,10 @@ class ContactController extends  Controller{
     }
 
     /**
-    //     * @Route("/contact/{id}", name="contact_show")
-    //     */
-    public function show($id){
+        * @Route("/contact/{id}", name="contact_show")
+        */
+    public function show($id)
+    {
         $contact = $this->getDoctrine()->getRepository(Contact::class)->find($id);
         return $this->render('contact/show.html.twig', array('contact' => $contact));
     }
@@ -74,7 +75,8 @@ class ContactController extends  Controller{
      * @Route("/contact/delete/{id}")
      * @Method({"DELETE"})
      */
-    public function delete(Request $request, $id) {
+    public function delete(Request $request, $id)
+    {
         $contact = $this->getDoctrine()->getRepository(Contact::class)->find($id);
 
         $entityManager = $this->getDoctrine()->getManager();
