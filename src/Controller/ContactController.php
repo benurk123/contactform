@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,7 +11,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Validator\Constraints\Length;
 
@@ -38,11 +38,11 @@ class ContactController extends  Controller{
                 'required' => true,
                 'attr' => array('class' => 'form-control')
             ))
-            ->add('telefoonnummer', TextareaType::class, [
+            ->add('telefoonnummer', TelType::class, [
                 'constraints' => new Length(['min' => 10]) , 'attr' => array('class' => 'form-control'),
             ])
             ->add('save', SubmitType::class, array(
-                'label' => 'Create',
+                'label' => 'Contact aanmaken',
                 'attr' => array('class' => 'btn btn-primary mt-3')
             ))
             ->getForm();

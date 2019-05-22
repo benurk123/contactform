@@ -14,10 +14,10 @@
             <tbody>
             {% for contact in contact %}
                 <tr>
-                    <td>{{ contact.naam }}</td>
+                    <td><h3><i class="fas fa-user">{{ contact.naam }}</i></h3></td>
                     <td>
-                        <a href="/contact/{{ contact.id }}" class="btn btn-dark">Show</a>
-                        <a href="#" class="btn btn-danger delete-contact" data-id="{{ contact.id }}">Delete</a>
+                        <a href="/contact/{{ contact.id }}" class="fas fa-eye" style="font-size: 20px">Show</a>
+                        <a href="#" class="fas fa-trash-alt delete-contact" style="font-size: 20px" data-id="{{ contact.id }}">Delete</a>
                     </td>
 
                 </tr>

@@ -3,11 +3,11 @@
 {% block title %}{{ contact.naam }}{% endblock %}
 
 {% block body %}
-    <h1>{{ contact.naam }}</h1>
-    <p>{{ contact.email }}</p>
-    <p>{{ contact.telefoonnummer }}</p>
+    <p><h2><i class="fas fa-user">  {{ contact.naam }}</i></h2></p>
+    <p><h2> <i class="fas fa-at">  {{ contact.email }}</i></h2></p>
+    <p> <h2><i class="fas fa-phone"> {{ contact.telefoonnummer }}</i></h2></p>
     <hr>
-    <a href="/">Terug</a>
+    <i class="fas fa-undo"><a href="/">Terug</a></i>
 {% endblock %}
 
 
